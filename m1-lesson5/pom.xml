@@ -13,7 +13,7 @@ Module  1 - Lesson 5</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>2.4.5</version>
         <relativePath></relativePath> <!-- lookup parent from repository -->
     </parent>
 
@@ -46,6 +46,19 @@ Module  1 - Lesson 5</description>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
+        <!-- validation -->
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
         </dependency>
 
         <!-- security -->
@@ -174,14 +187,16 @@ Module  1 - Lesson 5</description>
         
         <!-- persistence -->       
         <validation-api.version>1.1.0.Final</validation-api.version>
-  
+        <hibernate-validator.version>5.4.3.Final</hibernate-validator.version>
+
         <rest-assured.version>2.9.0</rest-assured.version>
 
         <!-- maven plugins -->
 		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>		
+		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
 
+        <spring-loaded.version>1.2.8.RELEASE</spring-loaded.version>
     </properties>
 
     <developers>
