@@ -1,6 +1,6 @@
 package com.baeldung.lss.web.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,10 +15,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "Username is required.")
+    @NotBlank(message = "Username is required.")
     private String username;
 
-    @NotEmpty(message = "Email is required.")
+    @NotBlank(message = "Email is required.")
     private String email;
 
     private Calendar created = Calendar.getInstance();
